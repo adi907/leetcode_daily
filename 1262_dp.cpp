@@ -50,7 +50,6 @@ int main() {
 
     cout<< maxSumDivThree(nums);
 
-
     return 0;
 }
 
@@ -66,11 +65,9 @@ int div3Sum(vector<int>& nums, int sum, int ind, vector<int>& dp){
     }
     int a=0,b=0;
 
-        a = div3Sum(nums, sum + nums[ind], ind+1, dp); 
-        b = div3Sum(nums, sum , ind+1, dp); 
+    a = div3Sum(nums, sum + nums[ind], ind+1, dp); 
+    b = div3Sum(nums, sum , ind+1, dp); 
 
-
-        cout<<"Bhai index: "<< ind<<" value: "<< max(a,b)<<endl;
     return dp[ind] = max(a,b);
 }
 
@@ -88,25 +85,4 @@ int maxSumDivThree(vector<int>& nums) {
         cout<< dp[i]<< " ";
     }
     return ans;
-}
-
-
-int main() {
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif
-
-    int n, ele;
-    vector<int> nums;
-    cin>> n;
-    for(int i =0 ;i<n;i++){
-        cin>> ele;
-        nums.push_back(ele);
-    }
-
-    cout<< endl<<"Ans: "<<maxSumDivThree(nums)<<endl;
-
-
-    return 0;
 }
