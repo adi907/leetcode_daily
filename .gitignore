@@ -5,14 +5,3 @@ output.txt
 
 # Default executable
 a.out
-
-# macOS debug directories
-*.dSYM/
-
-# Ignore all executables (no file extension)
-# Example: "myProgram", "run", etc.
-*
-!.*/
-!.gitignore
-*.cpp
-*.h
