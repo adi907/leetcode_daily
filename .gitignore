@@ -1,20 +1,18 @@
 input.txt
 output.txt
-# C++ compiled files
+# Object files
 *.o
-*.out
-*.exe
 
-# Default Mac executable from clang++/g++
+# Default executable
 a.out
 
-# Any executable with no extension
-*/.DS_Store
-**
+# macOS debug directories
+*.dSYM/
 
 # Ignore all executables (no file extension)
-# (Git trick: ignore files with no dot in the filename)
-*.[!a-zA-Z0-9]*
-
-# macOS debug symbol files
-*.dSYM/
+# Example: "myProgram", "run", etc.
+*
+!.*/
+!.gitignore
+*.cpp
+*.h
